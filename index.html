@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Store | Everyday Shopping Made Easy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="logo" href="#"><span>Smart</span> Store</a>
+      <div class="search">
+        <input id="searchInput" type="text" placeholder="Search products...">
+        <button id="searchBtn">🔍</button>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="wishlistBtn">♡ <span>Wishlist</span></button>
+        <button class="icon-btn cart-btn" id="cartBtn">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+        <button class="login-btn" id="loginBtn">Login</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">WELCOME TO SMART STORE</p>
+          <h1>Everything you need.<br><span>Smartly delivered.</span></h1>
+          <p class="hero-text">Discover quality groceries, electronics, fashion and everyday essentials at prices you'll love.</p>
+          <a href="#products" class="primary-btn">Shop Now →</a>
+        </div>
+        <div class="hero-card">
+          <div class="hero-badge">UP TO<br><strong>40% OFF</strong></div>
+          <div class="hero-emoji">🛍️</div>
+          <h3>Smart Deals</h3>
+          <p>Fresh offers every week</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories container">
+      <div class="section-head">
+        <div><p class="eyebrow">EXPLORE</p><h2>Shop by Category</h2></div>
+      </div>
+      <div class="category-grid">
+        <button class="category-card active" data-category="All">🛍️<span>All</span></button>
+        <button class="category-card" data-category="Grocery">🥦<span>Grocery</span></button>
+        <button class="category-card" data-category="Electronics">💻<span>Electronics</span></button>
+        <button class="category-card" data-category="Fashion">👕<span>Fashion</span></button>
+        <button class="category-card" data-category="Beauty">💄<span>Beauty</span></button>
+        <button class="category-card" data-category="Home">🏠<span>Home</span></button>
+      </div>
+    </section>
+
+    <section class="products container" id="products">
+      <div class="section-head">
+        <div><p class="eyebrow">OUR COLLECTION</p><h2>Popular Products</h2></div>
+        <select id="sortSelect">
+          <option value="default">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+      <div id="productGrid" class="product-grid"></div>
+      <p id="emptyState" class="empty hidden">No products found. Try another search.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><a class="logo" href="#"><span>Smart</span> Store</a><p>Simple, smart and reliable shopping for everyone.</p></div>
+      <div><h4>Quick Links</h4><a href="#products">Products</a><a href="#">About Us</a><a href="#">Contact</a></div>
+      <div><h4>Customer Care</h4><a href="#">Help Center</a><a href="#">Delivery Info</a><a href="#">Returns</a></div>
+    </div>
+    <div class="copyright">© 2026 Smart Store. All rights reserved.</div>
+  </footer>
+
+  <div id="cartPanel" class="side-panel">
+    <div class="panel-head"><h2>Your Cart</h2><button id="closeCart">✕</button></div>
+    <div id="cartItems"></div>
+    <div class="cart-bottom"><div><span>Total</span><strong id="cartTotal">৳0</strong></div><button class="primary-btn checkout">Proceed to Checkout</button></div>
+  </div>
+  <div id="overlay" class="overlay"></div>
+
+  <div id="loginModal" class="modal-wrap hidden">
+    <div class="modal">
+      <button class="modal-close" id="closeLogin">✕</button>
+      <div class="modal-icon">👤</div>
+      <h2>Welcome Back</h2>
+      <p>Login to your Smart Store account</p>
+      <input type="email" placeholder="Email address">
+      <input type="password" placeholder="Password">
+      <button class="primary-btn full">Login</button>
+      <small>Don't have an account? <b>Create one</b></small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
